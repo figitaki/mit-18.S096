@@ -1,10 +1,75 @@
 \section{Introduction, Financial Terms and Concepts} % (fold)
-\label{lec:1}
 
-Introductory lecture giving an overview of topics covered in the course.
+Introductory lecture giving an overview of topics covered in the course. Opens
+with an anecdote of Dr. Choongbum Lee speaking about his experience starting
+at the Morgan Stanley options desk coming from Solomon. Morgan Stanley calls
+Vega\footnote{Vega or kappa is a measure of volitility of an underlying asset}
+Kappa. There was a joke that the less educated people at solomon brothers call
+kappa Vega.
+
+Modern investment banks are structured into the following groups:
 
 \begin{itemize}
-  \item First topic
+  \item \textbf{Fixed income}: debt and debt derivative products
+  \item \textbf{Equities}: stocks and stock derivatives (ie. ETFs, indicies, etc)
+  \item \textbf{Investment banking}: corporate finance, M\&A etc.
 \end{itemize}
 
-% section Introduction, Financial Terms and Concepts (end)
+Why do we have financial markets? Connecting investors with borrowers. A dealer
+won't actually be a counter-party in a trade, where a broker will execute the
+trade as the counter-party. Hedge funds take advantage of market inneffeciencies
+in order to find. The main active participants in the market are
+\textbf{traders}. Traders involve three main types:
+
+\begin{enumerate}
+  \item Hedger
+  \item Market Maker, bid and offer
+  \item Proprietary trader, fund portfolio manager, beta and alpha
+\end{enumerate}
+
+Proprietary are trying to use active management strategies to beat the returns
+in the market. 
+
+\begin{equation} 
+  R(\alpha) = \alpha + \beta *R(\beta)
+\end{equation}
+
+\subsection{Hedging}
+
+Let's assume the interest rate in Japan is lower and the rate in Australia is
+higher. In this case, it would be logical to borrow JPY and invest the
+moeny in Australia. However this doesn't always work due to slippage between the
+two currencies. If you wanted to hedge this transaction, then you would need to
+pay AUD to recieve JPY using foreign exchange (\textbf{FX}) swaps and
+cross-currency basis.
+
+For example, consider Intel who may have a large portion of revenue in foreign
+currency. They need to find ways to hedge the currency exposure for the assets
+sitting in non USD accounts.
+
+\subsection{Market Making}
+
+Simple product bid/offer, price transparency, liquidity. Some of the "Greeks"
+they track are:
+
+\begin{itemize}
+  \item \textbf{delta}:  Difference between position and underlying value of the
+    asset.
+  \item \textbf{gamma}: Derivative of Change of the portfolio 
+  \item \textbf{theta}
+\end{itemize}
+
+\subsection{Proprietary Trading}
+
+Directional trading, long/short. Also known as gut trading. Also utilize
+arbitrage, which takes advantage of the difference between pricing in different
+markets. They also can take advantage of the spot vs future value. Another
+strategy is "value investing"\footnote{\url{https://en.wikipedia.org/wiki/
+Value_investing}} which uses underlying principles to value a stock in a long
+term time horizon.
+
+\subsection{Financial Mathematics}
+
+Math can assist with Pricing Models, Risk Management, and Trading Strateiges.
+
+%; section Introduction, Financial Terms and Concepts (end)

@@ -1,6 +1,27 @@
-\documentclass{article}
-\usepackage{fullpage,amsmath,amsfonts,amsthm,amssymb,mathtools}
+% !TeX spellcheck = en-US
+% !TeX encoding = utf8
+% !TeX program = pdflatex
+% !BIB program = bibtex
+\documentclass[a4paper]{article}
+\usepackage[ngerman,main=english]{babel}
+\usepackage{fullpage,amsmath,amssymb,mathtools}
+\usepackage{upquote}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{minted}
+\usepackage{tikz-cd}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{blkarray}
+
 \synctex=1
+\input{letterfonts.tex}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem{definition}[theorem]{Definition}
+
 \title{Topics in Mathematics with Applications in Finance}
 \author{Carey Janecka}
 \begin{document}

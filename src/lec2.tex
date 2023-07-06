@@ -1,0 +1,30 @@
+\section{Linear Algebra} % (fold)
+
+\begin{definition}
+  Matrix is a collection of numbers
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 2 & 3 \\
+      4 & 5 & 6 \\
+      7 & 8 & 9
+    \end{bmatrix}
+  \end{displaymath}
+\end{definition}
+
+We can use matrices to index the rows as stocks and columns as dates. For
+example:
+\[
+\begin{blockarray}{cccc}
+    & \text{4/20} & \text{4/21} & \text{4/22} \\
+    \begin{block}{c[ccc]}
+        \text{AAPL} & \dots & \dots & \dots \\
+        \text{NKE} & \dots & \dots & \dots \\
+        \text{COIN} & \dots & \dots & \dots \\
+    \end{block}
+\end{blockarray}
+\]
+
+From a theoretical point of view, a matrix $A$ of size $m * n$ is an operator
+that defines a linear transformation $A : \bbR^m \rightarrow \bbR^n$
+
+% section Linear Algebra (end)
