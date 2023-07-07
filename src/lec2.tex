@@ -25,6 +25,76 @@ example:
 \]
 
 From a theoretical point of view, a matrix $A$ of size $m * n$ is an operator
-that defines a linear transformation $A : \bbR^m \rightarrow \bbR^n$
+that defines a linear transformation $$A : \bbR^m \rightarrow \bbR^n$$
+
+\subsection{Eignvalue and Eigenvectors}
+
+\begin{definition}
+  Given an $\text{n} \times \text{n}$ matrix \textbf{$A$}, we define \textbf{$\lambda$} to be the
+  \textbf{eigenvalue} and vector \textbf{$\vv$} to be the \textbf{eigenvector}
+  such that:
+  \begin{displaymath}
+    A\vv = \lambda\vv
+  \end{displaymath}
+  We say $\vv$ is an \textbf{eigenvector} corresponding to $\lambda$.
+\end{definition}
+
+Do all matrices have eigenvalues?
+
+\begin{align*}
+  A\vv = \lambda\vv \Rightarrow (A-\lambda I)\vv &= 0 \\
+  \text{\textit{iff} } det(A-\lambda I) &= 0
+\end{align*}
+
+Where $det(A-\lambda I)$ is a polynomial of degreen $n$ in terms of $\lambda$
+which has a solution.
+
+\subsection{Geometrical meaning}
+
+\begin{center}
+\usetikzlibrary {3d}
+\begin{tikzpicture}[->]
+  \draw (0,0,0) -- (xyz cs:x=2);
+  \draw (0,0,0) -- (xyz cs:y=2);
+  \draw (0,0,0) -- (xyz cs:z=2);
+  \draw[red] (0,0,0) -- (1.25, 1.0, 1.0) node[above] {$\vv_1$};
+  \node at (2.75,3,3) {$\mathbb{R}^3$};
+
+  \draw[->,bend left=45] (3,2,2) to node[midway,above] {$A$} (5,2,2);
+
+  \draw (5,0,0) -- (xyz cs:x=7);
+  \draw (5,0,0) -- (xyz cs:y=2,x=5);
+  \draw (5,0,0) -- (xyz cs:z=2,x=5);
+  \draw[red] (5,0,0) -- (6.875, 1.5, 1.5) node[above] {$\lambda\vv_1$};
+  \node at (8, 3, 3) {$\mathbb{R}^3$};
+\end{tikzpicture}
+\end{center}
+
+Suppose $A$ is a $3 \times 3$ matrix. There exists some vector $\vv$ which when
+$A\vv$, the result is just $\vv$ scaled by a constant factor $\lambda$.
+
+\begin{definition}
+  An $n \times n$ matrix $A$ is \textbf{diagonalizable} if there exists an
+  orthonormal\footnote{An orthonormal matrix is defined as $U U^{-1} = I$}
+  matrix $U$ s.t. 
+  \begin{displaymath}
+    A = U D U^{-1}
+  \end{displaymath}
+  for a diagnoal matrix D.
+\end{definition}
+
+A \textbf{diagnoal matrix} has all it's non zero values on the diagnoal as
+shown below:
+
+\[
+  \begin{bmatrix}
+    a_{11} & 0 & 0 & \dots & 0 \\
+    0 & a_{22} & 0 & \dots & 0 \\
+    0 & 0 & \ddots & \ddots & \vdots \\
+    \vdots & \vdots & \ddots & a_{n-1,n-1} & 0 \\
+    0 & 0 & \dots & 0 & a_{nn} \\
+  \end{bmatrix}
+\]
+
 
 % section Linear Algebra (end)
